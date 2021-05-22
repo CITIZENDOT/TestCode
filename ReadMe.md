@@ -2,6 +2,12 @@
 
 When conducting an unofficial programming contest, which doesn't involve any popular sites, This may come handy. People employ various methods, to test their participants. If you're testing manually, You should stop it. Right Away!
 
+## Installation
+
+```bash
+pip install git+https://github.com/CITIZENDOT/TestCode.git
+```
+
 ## What this does ?
 
 As said, this is a python package and used as a command-line tool. Given testcases in a proper format, testcode runs the source code against all the inputs. Timeout is 2 seconds by default. You could increase it to large value, if you don't want to restrict with time constraints.
