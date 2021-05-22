@@ -1,31 +1,42 @@
-## Automate Code Testing
+## Automate Code Testing (C/C++)
 
-When conducting an unofficial contest, which doesn't involve any popular sites, This may come handy. People employ various methods, to test their participants. If you're testing manually, You should stop it. Right Away!
+When conducting an unofficial programming contest, which doesn't involve any popular sites, This may come handy. People employ various methods, to test their participants. If you're testing manually, You should stop it. Right Away!
 
-This program automates testing codes, And gives output neatly in colored format.
+## What this does ?
 
-## Usage:
+As said, this is a python package and used as a command-line tool. Given testcases in a proper format, testcode runs the source code against all the inputs. Timeout is 2 seconds by default. You could increase it to large value, if you don't want to restrict with time constraints.
+
+testcode has 2 sub-commands. Parameters to both sub-commands are same.
 
 ```bash
-$ python3 main.py -h
-usage: main.py [-h] [-L {c,cpp}] [-D SRC_DIR] [-N PATTERN] [-I INPUT_DIR] [-O OUTPUT_DIR] [-T TIMEOUT]
+❯ testcode verify --help
+Usage: testcode verify [OPTIONS]
 
-C/C++ Code Testing
+  Runs the code against all the valid input test-cases
 
-optional arguments:
-  -h, --help            show this help message and exit
-  -L {c,cpp}, --language {c,cpp}
-                        Choose your language (default: c)
-  -D SRC_DIR, --sorce-directory SRC_DIR
-                        Source Directory
-  -N PATTERN, --pattern PATTERN
-                        Name/Pattern of Source Code in Directory
-  -I INPUT_DIR, --input INPUT_DIR
-                        Input folder for testcases
-  -O OUTPUT_DIR, --output OUTPUT_DIR
-                        Output folder for testcases
-  -T TIMEOUT, --timeout TIMEOUT
-                        Time Out (Default = 5 Seconds)
+Options:
+  -S, --source PATH            Path to source code. Extension should be either
+                               .c or .cpp  [default: main.cpp]
+  -I, --input PATH             Input directory for test-cases  [default: Input]
+  -O, --output PATH            Output directory for test-cases  [default: Output]
+  -T, --timeout INTEGER RANGE  Time Limit for each testcase  [default: 2;x>=1]
+  --help                       Show this message and exit.
+
 ```
 
-**Star this repo, If you feel it's worthy!**
+- checkenv
+- verify
+
+## checkenv
+
+Prints the details given as parameters. As name said, It just checks if things are good.
+
+**Sample Output**
+![checkenv](images/checkenv.png)
+
+## verify
+
+Runs source code against input testcases and prints the verdict.
+
+**Sample Output**
+![verify](images/verify.png)
