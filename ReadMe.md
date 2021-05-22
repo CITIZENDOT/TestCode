@@ -32,6 +32,7 @@ Options:
 Prints the details given as parameters. As name said, It just checks if things are good.
 
 **Sample Output**
+
 ![checkenv](images/checkenv.png)
 
 ## verify
@@ -39,4 +40,5 @@ Prints the details given as parameters. As name said, It just checks if things a
 Runs source code against input testcases and prints the verdict.
 
 **Sample Output**
+
 ![verify](images/verify.png)
